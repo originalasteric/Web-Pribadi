@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Georgia, serif;
+  color: #f5dce1;
+}
+
+/* PAGE SYSTEM */
+.page {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+  background:
+    radial-gradient(circle at 30% 20%, #1b1420, #050409 70%);
+}
+
+.page-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* LANDING */
+.landing {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+}
+
+.landing h1 {
+  font-size: 36px;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.landing p {
+  font-size: 15px;
+  line-height: 1.9;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+button {
+  background: transparent;
+  border: 1px solid rgba(255,190,210,0.6);
+  color: #ffd6df;
+  padding: 12px 36px;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  cursor: pointer;
+  transition: 0.35s ease;
+}
+
+button:hover {
+  background: rgba(255,190,210,0.15);
+  transform: scale(1.05);
+}
+
+/* PAGE 2 */
+canvas {
+  position: absolute;
+  inset: 0;
+}
+
+#bg { z-index: 1; }
+#love { z-index: 2; }
+
+.text-box {
+  position: absolute;
+  z-index: 3;
+  top: 58%;                 /* TURUN dikit */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1000px;         /* sedikit lebih lebar */
+  text-align: center;
+}
+
+#text {
+  font-size: 19px;          /* lebih gede */
+  line-height: 2;           /* lebih lega */
+  letter-spacing: 0.8px;
+  color: rgba(255,235,240,0.95);
+}
